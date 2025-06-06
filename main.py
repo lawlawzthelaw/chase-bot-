@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from keep_alive import keep_alive
 import os
 
 intents = discord.Intents.default()
@@ -34,5 +33,4 @@ async def on_member_update(before, after):
                 embed.set_footer(text="Servidor agradecido 💖")
                 await canal.send(embed=embed)
 
-keep_alive()
 bot.run(os.getenv("DISCORD_TOKEN"))
